@@ -1,0 +1,9 @@
+# ETL dos dados > Códigos aplicados para estruturar o dataset
+
+dataset["Estado"] = dataset["Estado"].str.upper()
+
+dataset["Saldo_Gols"] = dataset["Gols_Pro"] - dataset["Gols_Contra"]
+
+dataset["Aprov_%"] = 100 * dataset["Pontos"] / (dataset["Jogos"] * 3)
+
+dataset["Aprov_%"] = dataset["Aprov_%"].round(2)
